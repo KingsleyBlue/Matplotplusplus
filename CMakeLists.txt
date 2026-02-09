@@ -70,7 +70,7 @@ option(MATPLOTPP_WITH_SYSTEM_NODESOUP "Use system-provided nodesoup instead of b
 if (MASTER_PROJECT)
     message("Setting global options")
     # Maybe add sanitizers to all targets
-    if (MATPLOTPP_BUILD_WITH_SANITIZERS AND NOT EMSCRIPTEN)
+    if (MATPLOTPP_BUILD_WITH_SANITIZERS AND NOT EMSCRIPTEN AND NOT APPLE)
         add_sanitizers()
     endif ()
 
